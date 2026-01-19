@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"
 import Home from "./pages/Home";
 import FunFact from "./pages/FunFact";
 import FAQ from "./pages/FAQ";
@@ -40,6 +41,8 @@ function App() {
         <Route path="/funfact" element={<FunFact />} />
         <Route path="/faq" element={<FAQ />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }
