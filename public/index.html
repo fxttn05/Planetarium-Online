@@ -50,6 +50,14 @@
         font-weight: 900;
         font-style: normal;
       }
+      @keyframes hover-float {
+        0%, 100% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-6px) scale(1.03); }
+      }
+    
+      .hover-float:hover {
+        animation: hover-float 1.8s ease-in-out infinite;
+      }
     </style>
     <title>Planetarium</title>
   </head>
