@@ -24,7 +24,7 @@ const PlanetFlipCard = ({ name, image, facts }) => {
   return (
     <div
       onClick={handleFlip}
-      className="w-72 h-81 perspective cursor-pointer hover:scale-103"
+      className="w-auto h-81 perspective cursor-pointer hover:scale-103"
     >
       <div
         className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${

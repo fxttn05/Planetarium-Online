@@ -18,7 +18,7 @@ const Bulan = () => {
           <img
             src="/planet/Bulan.png"
             alt="Mars"
-            className="order-2 md:order-1 w-40 h-40 md:w-56 md:h-56"
+            className="order-2 md:order-1 w-40 h-40 md:w-56 md:h-56 float"
           />
         
           {/* JUDUL */}
