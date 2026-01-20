@@ -16,7 +16,7 @@ const QuizQuestion = ({
       {/* HEADER */}
       <div className="flex justify-between mb-6 text-gray-400 text-sm">
         <span>QUESTION {current + 1} OF {total}</span>
-        <span className="text-yellow-400 font-semibold">EASY LEVEL</span>
+        <span className="text-yellow-400 font-bold font-space">QUIZ TIME!🎉</span>
       </div>
 
       {/* QUESTION */}

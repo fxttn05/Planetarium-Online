@@ -1,29 +1,41 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import QuizCard from "../../components/Quiz/QuizCard";
+import marsQuiz from "../../data/marsQuiz";
+import MiniCarouselCard from "../../components/MiniCarouselCard";
+import { marsFacts } from "../../data/facts";
 import { Link } from 'react-router-dom';
-import MiniCarouselCard from '../../components/MiniCarouselCard';
-import QuizCard from '../../components/QuizCard';
-
-const marsFacts = [
-  { title: 'Fakta 1', description: 'Deskripsi fakta Mars 1' },
-  { title: 'Fakta 2', description: 'Deskripsi fakta Mars 2' },
-];
-
-const marsQuiz = [{ question: 'Pertanyaan 1?', options: ['Opsi A', 'Opsi B'], answer: 0 }];
 
 const Mars = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <div className="bg-[url('/outer-space-background.jpg')] bg-cover bg-center bg-[#171B3E] bg-blend-multiply text-white">
       <div className="flex-grow max-w-5xl mx-auto px-6 py-16">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-20"> 
-          <img src="/planet/Mars.png" alt="Mars" className="w-56 h-56"/>
-          <h1 className="text-7xl md:text-9xl font-bold font-space">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-20">
+          
+          {/* GAMBAR KIRI */}
+          <img
+            src="/planet/Mars.png"
+            alt="Mars"
+            className="order-2 md:order-1 w-40 h-40 md:w-56 md:h-56"
+          />
+        
+          {/* JUDUL */}
+          <h1 className="order-1 md:order-2 text-7xl md:text-9xl font-bold font-space">
             Mars
           </h1>
-          <img src="/planet-real/Mars.png" alt="Astronaut" className="w-56 h-56 object-contain" />
+          
+          {/* GAMBAR KANAN */}
+          <img
+            src="/planet-real/Mars.png"
+            alt="Mars Real"
+            className="order-3 md:order-3 w-40 h-40 md:w-56 md:h-56 object-contain"
+          />
+        
         </div>
+
+
         <div className="space-y-10">
           <div>
             <div className="flex items-center gap-4 mb-6">
@@ -31,12 +43,11 @@ const Mars = () => {
               <h2 className="text-4xl font-bold">Penjelasan</h2>
             </div>
             <p className="text-xl leading-relaxed text-gray-300 ml-6">
-              Mars dikenal sebagai Planet Merah karena permukaannya dipenuhi debu besi berwarna kemerahan. Suhunya sangat dingin, tetapi para ilmuwan percaya bahwa Mars dulu pernah memiliki air. Karena itu, Mars menjadi planet yang menarik
-              dan sering dipelajari untuk mengetahui apakah pernah ada kehidupan di sana.
+              Mars dikenal sebagai Planet Merah karena permukaannya dipenuhi debu besi berwarna kemerahan. Suhunya sangat dingin, tetapi para ilmuwan percaya bahwa Mars dulu pernah memiliki air. Karena itu, Mars menjadi planet yang menarik dan sering dipelajari untuk mengetahui apakah pernah ada kehidupan di sana.
             </p>
           </div>
 
-          <div className="w-full ">
+          <div className='w-full '>
             <iframe
               width="560"
               height="315"
@@ -50,16 +61,17 @@ const Mars = () => {
             />
           </div>
 
-          <div className='flex gap-x-5'>
-            <div className='w-2/5'>
+          <div className='flex flex-wrap md:flex-nowrap gap-x-5'>
+            <div className='w-full md:w-2/5'>
               <div className='rounded-lg bg-[#2F3780]/20 mb-5 p-8'>
                 <MiniCarouselCard facts={marsFacts} />
               </div>
             </div> 
-            <div className='w-3/5'>
+            <div className='w-full md:w-3/5'>
               <QuizCard quizData={marsQuiz}/>
             </div>
           </div>
+
         </div>
 
         {/* BUTTON */}
@@ -70,7 +82,7 @@ const Mars = () => {
             </button>
           </Link>
           <Link to="/planet">
-            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xl hover:bg-white transition active:scale-95">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
               Halaman utama
             </button>
           </Link>
@@ -81,8 +93,9 @@ const Mars = () => {
           </Link>
         </div>
       </div>
-    </div>
-  );
-};
 
-export default Mars;
+    </div>
+  )
+}
+
+export default Mars
