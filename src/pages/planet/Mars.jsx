@@ -73,8 +73,7 @@ const Mars = () => {
 
       </main>
 
-      {/* FOOTER */}
-      <Footer />
+   
     </div>
   )
 }
