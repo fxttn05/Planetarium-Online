@@ -40,7 +40,7 @@ const Venus = () => {
               <h2 className="text-4xl font-bold">Penjelasan</h2>
             </div>
             <p className="text-xl leading-relaxed text-gray-300 ml-6">
-              Merkurius adalah planet terdekat dengan Matahari dan juga planet terkecil dalam tata surya. Planet ini tidak memiliki atmosfer yang tebal, sehingga permukaannya sangat terkena radiasi matahari. Merkurius memiliki orbit yang sangat cepat, hanya membutuhkan waktu 88 hari untuk menyelesaikan satu putaran mengelilingi Matahari.
+              Venus adalah planet kedua terdekat dari Matahari dan memiliki ukuran yang hampir sama dengan Bumi. Planet ini diselimuti atmosfer yang sangat tebal dan kaya karbon dioksida, sehingga panas Matahari terperangkap di permukaannya. Akibatnya, Venus menjadi planet terpanas di tata surya meskipun bukan yang paling dekat dengan Matahari.
             </p>
           </div>
 
