@@ -62,7 +62,7 @@ const MiniCarouselCard = () => {
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {slides.map((text, i) => (
-            <div key={i} className="min-w-full h-40 md:h-56 px-12 py-8">
+            <div key={i} className="min-w-full h-40 md:min-h-56 px-12 py-8">
               <div className="flex gap-2 items-center mb-3">
                 <div className="bg-[#2F3780]/30 h-9 w-9 rounded-full flex justify-center items-center">
                   <i className="fa-solid fa-lightbulb"></i>
