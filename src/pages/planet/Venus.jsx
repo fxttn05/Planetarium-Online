@@ -13,19 +13,19 @@ const Venus = () => {
           
           {/* GAMBAR KIRI */}
           <img
-            src="/planet/Merkurius.png"
+            src="/planet/Venus.png"
             alt="Mars"
             className="order-2 md:order-1 w-40 h-40 md:w-56 md:h-56 float"
           />
         
           {/* JUDUL */}
           <h1 className="order-1 md:order-2 text-5xl md:text-7xl font-bold font-space">
-            Merkurius
+            Venus
           </h1>
           
           {/* GAMBAR KANAN */}
           <img
-            src="/planet-real/Merkurius.png"
+            src="/planet-real/Venus.png"
             alt="Mars Real"
             className="order-3 md:order-3 w-40 h-40 md:w-56 md:h-56 object-contain"
           />
@@ -73,14 +73,19 @@ const Venus = () => {
 
         {/* BUTTON */}
         <div className="flex flex-col md:flex-row justify-center gap-10 mt-24">
+          <Link to="/planet/merkurius">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
+              <i class="fa-solid fa-arrow-left"></i> Menuju Merkurius
+            </button>
+          </Link>
           <Link to="/planet">
             <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
               Halaman utama
             </button>
           </Link>
-          <Link to="/planet/venus">
+          <Link to="/planet/bumi">
             <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
-              Menuju Venus <i class="fa-solid fa-arrow-right"></i>
+              Menuju Bumi <i class="fa-solid fa-arrow-right"></i>
             </button>
           </Link>
         </div>
