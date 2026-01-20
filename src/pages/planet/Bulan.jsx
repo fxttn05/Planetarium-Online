@@ -45,6 +45,18 @@ const Bulan = () => {
             <p className="text-xl leading-relaxed text-gray-300 ml-6">
               Bulan adalah satelit alami Bumi. Bulan memiliki permukaan yang dipenuhi craters dan dataran gelap yang disebut "maria". Bulan tidak memiliki atmosfer, sehingga tidak ada kehidupan di sana. Bulan juga mempengaruhi pasang surut air laut di Bumi.
             </p>
+            <div className="flex items-center gap-4 mb-6 mt-6">
+              <div className="w-1 h-10 bg-red-600 rounded-full"></div>
+              <h2 className="text-4xl font-bold">Teman Bulan</h2>
+            </div>
+            <p className="text-xl leading-relaxed text-gray-300 ml-6 mb-4">
+              Bulan mengelilingi Bumi sebagai satu-satunya satelit alaminya dan selalu menjaga jarak yang tetap. Dari posisinya, Bulan memengaruhi pasang surut air laut dan membantu menjaga keseimbangan gerakan Bumi di ruang angkasa.
+            </p>
+            <Link to="/planet/bumi">
+              <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full md:w-1/3">
+                Menuju Bumi <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </Link>
           </div>
 
           <div className='w-full '>
