@@ -18,6 +18,7 @@ import Uranus from "./pages/planet/Uranus";
 import Neptunus from "./pages/planet/Neptunus";
 import Pluto from "./pages/planet/Pluto";
 import Bulan from "./pages/planet/Bulan";
+import Matahari from "./pages/planet/Matahari";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="neptunus" element={<Neptunus />} />
           <Route path="pluto" element={<Pluto />} />
           <Route path="bulan" element={<Bulan />} />
+          <Route path="matahari" element={<Matahari />} />
         </Route>
         <Route path="/funfact" element={<FunFact />} />
         <Route path="/faq" element={<FAQ />} />

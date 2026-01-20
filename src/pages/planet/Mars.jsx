@@ -11,7 +11,7 @@ const Mars = () => {
 
   return (
     <div className="bg-[url('/outer-space-background.jpg')] bg-cover bg-center bg-[#171B3E] bg-blend-multiply text-white">
-      <div className="flex-grow max-w-5xl mx-auto px-6 py-16">
+      <div className="flex-grow max-w-5xl mx-auto py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-20">
           
           {/* GAMBAR KIRI */}

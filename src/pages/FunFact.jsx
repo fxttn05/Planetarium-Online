@@ -1,5 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import QuizCard from "../components/Quiz/QuizCard";
+import funfactQuiz from "../data/funfactQuiz";
+import MiniCarouselCard from "../components/MiniCarouselCard";
+import { solarSystemFunFacts } from "../data/facts";
 import PlanetFlipCard from "../components/PlanetFlipCard";
 import { planetFacts } from "../data/planetFacts";
 
@@ -19,7 +23,7 @@ const FunFact = () => {
                   <img src="/planet/Bumi.png" alt=""  className='h-12 w-12 float'/>
                 </div>
                 <div className=''>
-                  <Link to="/planet">
+                  <Link to="/planet/matahari">
                     <button className='cursor-pointer py-2 px-10 bg-white rounded-full space-grotesk-semibold text-xl md:text-3xl text-black'>
                       Yuk Cari Tahu
                     </button>
@@ -47,6 +51,17 @@ const FunFact = () => {
             <PlanetFlipCard name="Neptune" image="/planet/Neptunus.png" facts={planetFacts.neptune} />
           </div>
         </div>
+
+        <div className='flex flex-wrap md:flex-nowrap gap-x-5 mt-14'>
+            <div className='w-full md:w-2/5'>
+              <div className='rounded-lg bg-[#2F3780]/20 mb-5 p-8'>
+                <MiniCarouselCard facts={solarSystemFunFacts} />
+              </div>
+            </div> 
+            <div className='w-full md:w-3/5'>
+              <QuizCard quizData={funfactQuiz}/>
+            </div>
+          </div>
       </div>
     </>
   )
