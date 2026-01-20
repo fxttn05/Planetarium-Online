@@ -1,70 +1,95 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Footer from '../../components/Footer'
+import QuizCard from "../../components/Quiz/QuizCard";
+import merkuriusQuiz from "../../data/merkuriusQuiz";
+import MiniCarouselCard from "../../components/MiniCarouselCard";
+import { mercuryFacts } from "../../data/facts";
+import { Link } from 'react-router-dom';
 
 
 const Merkurius = () => {
   const navigate = useNavigate()
 
   return (
-    <div className='min-h-screen flex flex-col bg-[#1a1f3c] text-white'>
-      <main className='flex-grow max-w-5xl mx-auto px-6 py-16'>
-        <div className='flex flex-col md:flex-row items-center justify-between gap-10 mb-20'>
-          <img
-            src="/Astronaut.png"
-            alt="Astronaut"
-            className="w-48 h-48 object-contain"
-          />
-
-          <h1 className="text-7xl md:text-9xl font-bold">
-            Merkurius
-          </h1>
-
+    <div className="bg-[url('/outer-space-background.jpg')] bg-cover bg-center bg-[#171B3E] bg-blend-multiply text-white">
+      <div className="flex-grow max-w-5xl mx-auto py-16">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-20">
+          
+          {/* GAMBAR KIRI */}
           <img
             src="/planet/Merkurius.png"
-            alt="Merkurius"
-            className="w-56 h-56 md:w-64 md:h-64 rounded-3xl object-cover border-4 border-[#2d345e]"
+            alt="Mars"
+            className="order-2 md:order-1 w-40 h-40 md:w-56 md:h-56 float"
           />
+        
+          {/* JUDUL */}
+          <h1 className="order-1 md:order-2 text-5xl md:text-7xl font-bold font-space">
+            Merkurius
+          </h1>
+          
+          {/* GAMBAR KANAN */}
+          <img
+            src="/planet-real/Merkurius.png"
+            alt="Mars Real"
+            className="order-3 md:order-3 w-40 h-40 md:w-56 md:h-56 object-contain"
+          />
+        
         </div>
 
-        <div className='max-w-3xl space-y-16'>
-          <section>
+
+        <div className="space-y-10">
+          <div>
             <div className="flex items-center gap-4 mb-6">
-              <div className='w-1 h-10 bg-red-600 rounded-full'></div>
-              <h2 className='text-4xl font-bold'> Fakta Cepat</h2>
+              <div className="w-1 h-10 bg-red-600 rounded-full"></div>
+              <h2 className="text-4xl font-bold">Penjelasan</h2>
             </div>
-            <ul className='list-disc ml-6 space-y-3 text-xl text-gray-300 marker:text-red-500'>
-              <li>Planet terdekat dengan Matahari</li>
-              <li>Planet terkecil di tata surya</li>
-              <li>Tidak memiliki atmosfer</li>
-              <li>Satu tahun hanya 88 hari</li>
-            </ul>
-          </section>
-
-          <section>
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='w-1 h-10 bg-red-600 rounded-full'></div>
-              <h2 className='text-4xl font-bold'> Penjelasan</h2>
-            </div>
-            <p className='text-xl leading-relaxed text-gray-300 ml-6'>
-              Merkurius adalah planet terdekat dengan Matahari dan juga planet terkecil dalam tata surya. 
-              Planet ini tidak memiliki atmosfer yang tebal, 
-              sehingga permukaannya sangat terkena radiasi matahari. 
-              Merkurius memiliki orbit yang sangat cepat, hanya membutuhkan waktu 88 hari untuk menyelesaikan satu putaran mengelilingi Matahari.
+            <p className="text-xl leading-relaxed text-gray-300 ml-6">
+              Merkurius adalah planet terdekat dengan Matahari dan juga planet terkecil dalam tata surya. Planet ini tidak memiliki atmosfer yang tebal, sehingga permukaannya sangat terkena radiasi matahari. Merkurius memiliki orbit yang sangat cepat, hanya membutuhkan waktu 88 hari untuk menyelesaikan satu putaran mengelilingi Matahari.
             </p>
-          </section>
+          </div>
+
+          <div className='w-full '>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/FbSXQ4axWvM?si=EJ3yapBaCh5mQ78H&amp;start=21"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg w-full md:min-h-[75vh] rounded-xl"
+            />
+          </div>
+
+          <div className='flex flex-wrap md:flex-nowrap gap-x-5'>
+            <div className='w-full md:w-2/5'>
+              <div className='rounded-lg bg-[#2F3780]/20 mb-5 p-8'>
+                <MiniCarouselCard facts={mercuryFacts} />
+              </div>
+            </div> 
+            <div className='w-full md:w-3/5'>
+              <QuizCard quizData={merkuriusQuiz}/>
+            </div>
+          </div>
+
         </div>
 
-        <div className='flex justify-center mt-24'>
-          <button
-            onClick={() => navigate('/planet')}
-            className='bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xl hover:bg-white transition active:scale-95'
-          >
-            Kembali
-          </button>
+        {/* BUTTON */}
+        <div className="flex flex-col md:flex-row justify-center gap-10 mt-24">
+          <Link to="/planet">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
+              Halaman utama
+            </button>
+          </Link>
+          <Link to="/planet/venus">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
+              Menuju Venus <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </Link>
         </div>
+      </div>
 
-      </main>
     </div>
   )
 }
