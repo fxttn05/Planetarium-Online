@@ -2,7 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='text-center bg-black space-grotesk-normal text-sm text-white py-2'> &copy; Copyright 2026 <span className='space-grotesk-semibold'></span>Kelompok 4</div>
+    <footer className="mt-auto w-full bg-black text-center text-sm text-white py-3">
+      © Copyright 2026
+      <span className="font-semibold"> Kelompok 4</span>
+    </footer>
   )
 }
 
