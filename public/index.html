@@ -12,8 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font -->
     <style>
+      .font-orbitron{
+        font-family: "Orbitron", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
       .orbitron-normal {
         font-family: "Orbitron", sans-serif;
         font-optical-sizing: auto;
@@ -30,6 +36,11 @@
         font-family: "Orbitron", sans-serif;
         font-optical-sizing: auto;
         font-weight: 900;
+        font-style: normal;
+      }
+      .font-space {
+        font-family: "Space Grotesk", sans-serif;
+        font-optical-sizing: auto;
         font-style: normal;
       }
       .space-grotesk-normal {
@@ -50,13 +61,15 @@
         font-weight: 900;
         font-style: normal;
       }
-      @keyframes hover-float {
+      @keyframes float {
         0%, 100% { transform: translateY(0) scale(1); }
-        50% { transform: translateY(-6px) scale(1.03); }
+        50% { transform: translateY(-3px) scale(1.02); }
       }
-    
+      .float{
+        animation: float 1.8s ease-in-out infinite;
+      }
       .hover-float:hover {
-        animation: hover-float 1.8s ease-in-out infinite;
+        animation: float 1.8s ease-in-out infinite;
       }
     </style>
     <title>Planetarium</title>

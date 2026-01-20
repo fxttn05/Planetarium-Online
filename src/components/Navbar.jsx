@@ -6,8 +6,8 @@ const base =
 
 const navClass = ({ isActive }) =>
   isActive
-    ? `${base} text-black font-black}`
-    : `${base} text-gray-700 hover:underline`;
+    ? `${base} text-[#2F3780] font-black underline`
+    : `${base} text-gray-700 hover:underline hover-float`;
 
 const NAV_HEIGHT = 72; // h-18
 
@@ -22,7 +22,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Spacer: SATU KALI, TIDAK PERNAH BERUBAH */}
       <div style={{ height: NAV_HEIGHT }} />
 
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px
