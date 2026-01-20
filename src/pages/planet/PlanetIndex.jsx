@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const planets = [
   { photo: "Merkurius", path: "merkurius" },
@@ -17,11 +18,36 @@ const planets = [
 const PlanetIndex = () => {
   return (
     <>
-      <div className='mt-10 mb-14 px-2 sm:px-20'>
+      <div className='px-8 sm:px-40 py-4 sm:py-10 bg-blue-800/10 min-h-64'>
+        <div className='flex gap-x-20'>
+          <div className='w-2/5'>
+            <img src="/Astronaut.png" alt="" className='rounded-xl '/>
+          </div>
+          <div className='w-3/5'>
+            <p className='text-7xl font-space font-black leading-24'>Ayo Jelajahi Alam Semesta</p>
+            <p className='text-xl font-space leading-10'>Ikuti petualangan seru melintasi tata surya bersama Kapten Komet, astronot cilik yang akan menemanimu belajar rahasia bintang!</p>
+            <div className='mt-10 flex justify-center md:justify-normal pl-8'>
+              <div className=' hover:scale-102'>
+                <div className='absolute -ml-6 -mt-6'>
+                  <img src="AstronotMale.png" alt="" className='h-12 w-14 float'/>
+                </div>
+                <div className=''>
+                  <Link to="/planet/merkurius">
+                    <button className='cursor-pointer py-3 px-10 bg-white rounded-full space-grotesk-semibold text-xl md:text-3xl text-black'>
+                      Mulai Petualangan <i class="fa-solid fa-compass"></i>
+                    </button>
+                  </Link> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='py-10 px-2 sm:px-20'>
         <div className='mb-16'>
           <p className='text-xl md:text-4xl space-grotesk-semibold text-center'> Planet Tata Surya Kita</p>
         </div>
-        <div className='flex flex-wrap gap-y-16 mb-8 '>
+        <div className='flex flex-wrap gap-y-16'>
         {planets.map((p) => (
           <div className="w-full md:w-1/3 px-4">
             <div className='p-2 md:p-4 bg-[#2F3780] rounded-t-lg'>
@@ -40,9 +66,6 @@ const PlanetIndex = () => {
             </NavLink>
           </div>
         ))}
-        </div>
-        <div className=''>
-          <p className='text-2xl space-grotesk-semibold text-center'> dan masih banyak lagi.. </p>
         </div>
       </div>
     </>

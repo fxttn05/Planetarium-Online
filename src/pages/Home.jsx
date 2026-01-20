@@ -34,7 +34,7 @@ const Home = () => {
             <div className='w-full md:w-2/3 rounded-lg bg-[#2F3780]/20 h-full'>
               <div className="relative block rounded-base">
                 <div className='absolute top-2 left-2'>
-                  <div className='px-5 py-1 bg-red-600/50 rounded-full text-xs'>Planet pekan ini</div>
+                  <div className='px-5 py-1 bg-red-600/50 rounded-full text-xs font-space'>Planet pekan ini</div>
                 </div>
                 <div className='flex justify-center'>
                   <img className="rounded-t-base w-64 h-64" src="Saturnus-Animation.png" alt="" />
@@ -101,7 +101,7 @@ const Home = () => {
             <div className="w-full md:w-1/3">
               <div className='rounded-lg p-2 md:p-4 bg-[#2F3780]'>
                 <div className='flex justify-center mb-5 -mt-12'>
-                  <img src="/planet/Saturnus.png" alt=""  className='h-32 w-40 hover:scale-102 float'/>
+                  <img src="/planet/Saturnus.png" alt=""  className='h-32 w-32 hover:scale-102 float'/>
                 </div>
                 <p className='text-3xl space-grotesk-semibold text-center'>Saturnus</p>
               </div>
