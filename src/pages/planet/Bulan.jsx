@@ -28,7 +28,7 @@ const Bulan = () => {
           
           {/* GAMBAR KANAN */}
           <img
-            src="/planet-real/"
+            src="/planet-real/Bulan.png"
             alt="Mars Real"
             className="order-3 md:order-3 w-40 h-40 md:w-56 md:h-56 object-contain"
           />
