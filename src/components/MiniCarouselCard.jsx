@@ -1,29 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
-const facts = [
-  "Tata surya terdiri dari delapan planet yang mengelilingi Matahari sebagai pusat gravitasinya.",
-  "Matahari menyumbang lebih dari 99 persen massa total tata surya, sehingga pengaruh gravitasinya sangat besar.",
-  "Selain planet, tata surya juga memiliki asteroid, komet, dan meteoroid yang mengorbit Matahari.",
-  "Sabuk asteroid terletak di antara orbit Mars dan Jupiter dan berisi jutaan batuan angkasa.",
-  "Planet dalam seperti Merkurius, Venus, Bumi, dan Mars memiliki permukaan berbatu.",
-  "Planet luar seperti Jupiter dan Saturnus dikenal sebagai raksasa gas karena ukurannya sangat besar.",
-  "Uranus dan Neptunus sering disebut raksasa es karena komposisinya yang kaya akan es dan gas.",
-  "Setiap planet memiliki periode rotasi dan revolusi yang berbeda-beda.",
-  "Bulan tidak hanya dimiliki oleh Bumi, tetapi hampir semua planet di tata surya.",
-  "Tata surya diperkirakan terbentuk sekitar 4,6 miliar tahun yang lalu dari awan gas dan debu."
-];
+const MiniCarouselCard = ({ facts }) => {
+  const slides = [
+    facts[facts.length - 1],
+    ...facts,
+    facts[0],
+  ];
 
-// clone slides
-const slides = [
-  facts[facts.length - 1],
-  ...facts,
-  facts[0],
-];
-
-const MiniCarouselCard = () => {
   const [index, setIndex] = useState(1);
   const [transition, setTransition] = useState(true);
-  const trackRef = useRef(null);
 
   const next = () => {
     setIndex((prev) => prev + 1);
@@ -49,47 +34,55 @@ const MiniCarouselCard = () => {
         setIndex(slides.length - 2);
       }, 500);
     }
-  }, [index]);
+  }, [index, slides.length]);
 
   return (
-    <div className="relative w-full max-w-md mx-auto">
-      <div className="overflow-hidden rounded-lg">
+    <div className="w-full max-w-md mx-auto relative">
+      
+      {/* ===== HEADER LUAR ===== */}
+      <div className="flex items-center gap-2 mb-4">
+        <div className="bg-pink-500 h-9 w-9 rounded-xl flex justify-center items-center">
+          <i className="fa-solid fa-lightbulb text-white"></i>
+        </div>
+        <h4 className="text-white text-xl font-extrabold">
+          Tahukah kamu?
+        </h4>
+      </div>
+
+      {/* ===== CARD ===== */}
+      <div className="relative overflow-hidden rounded-2xl bg-[#0e132a] border border-white/10">
         <div
-          ref={trackRef}
           className={`flex ${
             transition ? "transition-transform duration-500 ease-in-out" : ""
           }`}
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {slides.map((text, i) => (
-            <div key={i} className="min-w-full h-40 md:min-h-56 px-12 py-8">
-              <div className="flex gap-2 items-center mb-3">
-                <div className="bg-[#2F3780]/30 h-9 w-9 rounded-full flex justify-center items-center">
-                  <i className="fa-solid fa-lightbulb"></i>
-                </div>
-                <h4 className="text-white font-space text-xl font-extrabold">
-                  Tahukah kamu..
-                </h4>
-              </div>
-              <p className="text-white font-space text-lg">{text}</p>
+            <div key={i} className="min-w-full px-8 py-10 text-center">
+              <p className="text-white text-lg leading-relaxed font-space">
+                {text}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      <button
-        onClick={prev}
-        className="absolute left-1 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white w-8 h-8 rounded-full"
-      >
-        <i className="fa-solid fa-angle-left"></i>
-      </button>
+      {/* ===== NAV BUTTON ===== */}
+      <div className="flex justify-center gap-4 mt-5">
+        <button
+          onClick={prev}
+          className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white transition"
+        >
+          ‹
+        </button>
 
-      <button
-        onClick={next}
-        className="absolute right-1 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white w-8 h-8 rounded-full"
-      >
-        <i className="fa-solid fa-angle-right"></i>
-      </button>
+        <button
+          onClick={next}
+          className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white transition"
+        >
+          ›
+        </button>
+      </div>
     </div>
   );
 };

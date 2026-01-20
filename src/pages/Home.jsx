@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import MiniCarouselCard from '../components/MiniCarouselCard';
+import { homeFacts } from "../data/facts";
 
 const Home = () => {
   return (
@@ -53,8 +54,8 @@ const Home = () => {
               </div>
             </div>
             <div className='w-full  md:w-1/3'>
-              <div className='rounded-lg bg-[#2F3780]/20 mb-5'>
-                <MiniCarouselCard/>
+              <div className='rounded-lg bg-[#2F3780]/20 mb-5 py-4 px-8'>
+                <MiniCarouselCard facts={homeFacts} />
               </div>
               <div className='rounded-lg bg-[#2F3780]/20 mb-5'>
                 <div className='px-12 py-8'>

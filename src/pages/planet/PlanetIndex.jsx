@@ -20,10 +20,10 @@ const PlanetIndex = () => {
     <>
       <div className='px-8 sm:px-40 py-4 sm:py-10 bg-blue-800/10 min-h-64'>
         <div className='flex gap-x-20'>
-          <div className='w-2/5'>
+          <div className='hidden md:block w-2/5'>
             <img src="/Astronaut.png" alt="" className='rounded-xl '/>
           </div>
-          <div className='w-3/5'>
+          <div className='w-full md:w-3/5'>
             <p className='text-7xl font-space font-black leading-24'>Ayo Jelajahi Alam Semesta</p>
             <p className='text-xl font-space leading-10'>Ikuti petualangan seru melintasi tata surya bersama Kapten Komet, astronot cilik yang akan menemanimu belajar rahasia bintang!</p>
             <div className='mt-10 flex justify-center md:justify-normal pl-8'>
@@ -33,7 +33,7 @@ const PlanetIndex = () => {
                 </div>
                 <div className=''>
                   <Link to="/planet/merkurius">
-                    <button className='cursor-pointer py-3 px-10 bg-white rounded-full space-grotesk-semibold text-xl md:text-3xl text-black'>
+                    <button className='cursor-pointer py-3 px-10 bg-white rounded-full space-grotesk-semibold text-lg md:text-3xl text-black'>
                       Mulai Petualangan <i class="fa-solid fa-compass"></i>
                     </button>
                   </Link> 
@@ -45,7 +45,7 @@ const PlanetIndex = () => {
       </div>
       <div className='py-10 px-2 sm:px-20'>
         <div className='mb-16'>
-          <p className='text-xl md:text-4xl space-grotesk-semibold text-center'> Planet Tata Surya Kita</p>
+          <p className='text-2xl md:text-4xl space-grotesk-semibold text-center'> Planet Tata Surya Kita</p>
         </div>
         <div className='flex flex-wrap gap-y-16'>
         {planets.map((p) => (
