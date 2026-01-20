@@ -31,7 +31,7 @@ const Home = () => {
         <div className='mt-10 mb-10 px-8 sm:px-40 py-4 sm:py-20 bg-gray-500/10 min-h-64'>
           <p className='text-3xl md:text-5xl space-grotesk-semibold text-center'> Eksplorasi Hari ini </p>
           <div className='flex flex-wrap md:flex-nowrap gap-5 mt-10'>
-            <div className='w-full md:w-2/3 rounded-lg bg-[#2F3780]/20 h-fill'>
+            <div className='w-full md:w-2/3 rounded-lg bg-[#2F3780]/20 h-full'>
               <div className="relative block rounded-base">
                 <div className='absolute top-2 left-2'>
                   <div className='px-5 py-1 bg-red-600/50 rounded-full text-xs'>Planet pekan ini</div>
@@ -44,19 +44,42 @@ const Home = () => {
                     <p className='mt-3 text-lg space-grotesk-normal'>Tahukah kamu? cincin saturnus terbuat dari miliaran bongkahan es dan batu batu yang menari nari mengelilingi planet raksasa</p>
                     <div className="mt-6 text-white text-center">
                       <Link to="/planet/saturnus" className="">
-                        <button className='bg-red-600 py-3 rounded-full w-full font-medium font-space'>
-                          Jelajahi Saturnus
+                        <button className='bg-red-600 py-3 rounded-full w-full font-medium font-space  hover:scale-102'>
+                          Jelajahi Saturnus <i class="fa-solid fa-arrow-right"></i>
                         </button>
                       </Link>
                     </div>
                 </div>
               </div>
             </div>
-            <div className='w-full md:w-1/3'>
+            <div className='w-full  md:w-1/3'>
               <div className='rounded-lg bg-[#2F3780]/20 mb-5'>
                 <MiniCarouselCard/>
               </div>
-              <div className='h-20 bg-[#2F3780]'></div>
+              <div className='rounded-lg bg-[#2F3780]/20 mb-5'>
+                <div className='px-12 py-8'>
+                  <div className="flex gap-2 items-center mb-3">
+                    <div className="bg-[#2F3780]/30 h-9 w-9 rounded-full flex justify-center items-center">
+                      <i className="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h4 className="text-white font-space text-xl font-extrabold">
+                      Cari tau lebih banyak
+                    </h4>
+                  </div>
+                  <div>
+                    <p className='text-2xl font-black font-space mb-2'>
+                      Fakta Menarik lain tentang luar angkasa
+                    </p>
+                    <div className="mt-6 text-white text-center">
+                      <Link to="/funcfact" className="">
+                        <button className='bg-red-600 py-3 rounded-full w-full font-medium font-space  hover:scale-102'>
+                          Fun fact <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
