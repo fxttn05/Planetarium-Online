@@ -20,7 +20,7 @@ import Bulan from "./pages/planet/Bulan";
 
 function App() {
   return (
-    <div className=" min-h-auto">
+    <div className="h-auto">
       <Navbar />
 
       <Routes>
