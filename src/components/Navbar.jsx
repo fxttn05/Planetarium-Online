@@ -55,7 +55,7 @@ const Navbar = () => {
                   <NavLink to="/" end className={navClass}>Home</NavLink>
                   <NavLink to="/planet" className={navClass}>Planet</NavLink>
                   <NavLink to="/funfact" className={navClass}>Fun Fact</NavLink>
-                  <NavLink to="/FAQ" className={navClass}>FAQ</NavLink>
+                  <NavLink to="/about" className={navClass}>About</NavLink>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ const Navbar = () => {
             <NavLink to="/" end className={navClass}>Home</NavLink>
             <NavLink to="/planet" className={navClass}>Planet</NavLink>
             <NavLink to="/funfact" className={navClass}>Fun Fact</NavLink>
-            <NavLink to="/FAQ" className={navClass}>FAQ</NavLink>
+            <NavLink to="/about" className={navClass}>About</NavLink>
           </div>
         </el-disclosure>
       </nav>

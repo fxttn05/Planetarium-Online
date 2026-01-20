@@ -5,7 +5,10 @@ const FunFact = () => {
     <>
       <div className="bg-[url('/outer-space-background.jpg')] bg-cover bg-center bg-[#171B3E] bg-blend-multiply text-white px-2 sm:px-20 py-4 md:py-12">
         <div className='w-full h-48 bg-linear-65 from-purple-500 to-pink-500 rounded-xl'>
-          <div className='flex gap-x-4'></div>
+          <div className='flex gap-x-4'>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
     </>
