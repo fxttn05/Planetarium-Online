@@ -12,13 +12,27 @@ const Mars = () => {
   return (
     <div className="bg-[url('/outer-space-background.jpg')] bg-cover bg-center bg-[#171B3E] bg-blend-multiply text-white">
       <div className="flex-grow max-w-5xl mx-auto px-6 py-16">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-20"> 
-          <img src="/planet/Mars.png" alt="Mars" className="w-56 h-56"/>
-          <h1 className="text-7xl md:text-9xl font-bold font-space">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-20">
+
+          {/* JUDUL */}
+          <h1 className="order-1 md:order-2 text-7xl md:text-9xl font-bold font-space">
             Mars
           </h1>
-          <img src="/planet-real/Mars.png" alt="Astronaut" className="w-56 h-56 object-contain" />
+          {/* WRAPPER GAMBAR */}
+          <div className="order-2 md:order-1 flex gap-6">
+            <img
+              src="/planet/Mars.png"
+              alt="Mars"
+              className="w-40 h-40 md:w-56 md:h-56"
+            />
+            <img
+              src="/planet-real/Mars.png"
+              alt="Mars Real"
+              className="w-40 h-40 md:w-56 md:h-56 object-contain"
+            />
+          </div>
         </div>
+
         <div className="space-y-10">
           <div>
             <div className="flex items-center gap-4 mb-6">
@@ -40,17 +54,17 @@ const Mars = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              className="rounded-lg w-full min-h-[75vh] rounded-xl"
+              className="rounded-lg w-full md:min-h-[75vh] rounded-xl"
             />
           </div>
 
-          <div className='flex gap-x-5'>
-            <div className='w-2/5'>
+          <div className='flex flex-wrap md:flex-nowrap gap-x-5'>
+            <div className='w-full md:w-2/5'>
               <div className='rounded-lg bg-[#2F3780]/20 mb-5 p-8'>
                 <MiniCarouselCard facts={marsFacts} />
               </div>
             </div> 
-            <div className='w-3/5'>
+            <div className='w-full md:w-3/5'>
               <QuizCard quizData={marsQuiz}/>
             </div>
           </div>
@@ -58,19 +72,19 @@ const Mars = () => {
         </div>
 
         {/* BUTTON */}
-        <div className="flex justify-center gap-10 mt-24">
+        <div className="flex flex-col md:flex-row justify-center gap-10 mt-24">
           <Link to="/planet/bumi">
-            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xl hover:bg-white transition active:scale-95">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
               <i class="fa-solid fa-arrow-left"></i> Menuju Bumi
             </button>
           </Link>
           <Link to="/planet">
-            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xl hover:bg-white transition active:scale-95">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
               Halaman utama
             </button>
           </Link>
           <Link to="/planet/jupiter">
-            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xl hover:bg-white transition active:scale-95">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
               Menuju Jupiter <i class="fa-solid fa-arrow-right"></i>
             </button>
           </Link>

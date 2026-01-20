@@ -5,6 +5,7 @@ import Footer from "./components/Footer"
 import Home from "./pages/Home";
 import FunFact from "./pages/FunFact";
 import FAQ from "./pages/FAQ";
+import About from "./pages/About";
 import PlanetLayout from "./pages/planet/PlanetLayout";
 import PlanetIndex from "./pages/planet/PlanetIndex";
 import Merkurius from "./pages/planet/Merkurius";
@@ -40,6 +41,7 @@ function App() {
         </Route>
         <Route path="/funfact" element={<FunFact />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/about" element={<About />} />
       </Routes>
 
       <Footer />
