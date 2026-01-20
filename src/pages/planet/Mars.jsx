@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer'
 
+
 const Mars = () => {
   const navigate = useNavigate()
 
@@ -30,7 +31,7 @@ const Mars = () => {
           />
         </div>
 
-        {/* CONTENT TEXT */}
+        {/* CONTENT  */}
         <div className="max-w-3xl space-y-16">
           
           <section>

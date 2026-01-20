@@ -1,12 +1,70 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import Footer from '../../components/Footer'
+
 
 const Merkurius = () => {
+  const navigate = useNavigate()
+
   return (
-    <div className="mt-6">
-      <h2 className="text-3xl font-bold mb-2">Merkurius</h2>
-      <p className="text-gray-300">
-        Merkurius adalah planet terdekat dengan Matahari dan memiliki suhu ekstrem.
-      </p>
+    <div className='min-h-screen flex flex-col bg-[#1a1f3c] text-white'>
+      <main className='flex-grow max-w-5xl mx-auto px-6 py-16'>
+        <div className='flex flex-col md:flex-row items-center justify-between gap-10 mb-20'>
+          <img
+            src="/Astronaut.png"
+            alt="Astronaut"
+            className="w-48 h-48 object-contain"
+          />
+
+          <h1 className="text-7xl md:text-9xl font-bold">
+            Merkurius
+          </h1>
+
+          <img
+            src="/planet/Merkurius.png"
+            alt="Merkurius"
+            className="w-56 h-56 md:w-64 md:h-64 rounded-3xl object-cover border-4 border-[#2d345e]"
+          />
+        </div>
+
+        <div className='max-w-3xl space-y-16'>
+          <section>
+            <div className="flex items-center gap-4 mb-6">
+              <div className='w-1 h-10 bg-red-600 rounded-full'></div>
+              <h2 className='text-4xl font-bold'> Fakta Cepat</h2>
+            </div>
+            <ul className='list-disc ml-6 space-y-3 text-xl text-gray-300 marker:text-red-500'>
+              <li>Planet terdekat dengan Matahari</li>
+              <li>Planet terkecil di tata surya</li>
+              <li>Tidak memiliki atmosfer</li>
+              <li>Satu tahun hanya 88 hari</li>
+            </ul>
+          </section>
+
+          <section>
+            <div className='flex items-center gap-4 mb-6'>
+              <div className='w-1 h-10 bg-red-600 rounded-full'></div>
+              <h2 className='text-4xl font-bold'> Penjelasan</h2>
+            </div>
+            <p className='text-xl leading-relaxed text-gray-300 ml-6'>
+              Merkurius adalah planet terdekat dengan Matahari dan juga planet terkecil dalam tata surya. 
+              Planet ini tidak memiliki atmosfer yang tebal, 
+              sehingga permukaannya sangat terkena radiasi matahari. 
+              Merkurius memiliki orbit yang sangat cepat, hanya membutuhkan waktu 88 hari untuk menyelesaikan satu putaran mengelilingi Matahari.
+            </p>
+          </section>
+        </div>
+
+        <div className='flex justify-center mt-24'>
+          <button
+            onClick={() => navigate('/planet')}
+            className='bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xl hover:bg-white transition active:scale-95'
+          >
+            Kembali
+          </button>
+        </div>
+
+      </main>
     </div>
   )
 }
