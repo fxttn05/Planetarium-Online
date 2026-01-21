@@ -42,26 +42,23 @@ const Bulan = () => {
               <div className="w-1 h-10 bg-red-600 rounded-full"></div>
               <h2 className="text-4xl font-bold">Penjelasan</h2>
             </div>
-            <p className="text-xl leading-relaxed text-gray-300 ml-6">
-              
-            </p>
-            <div className="flex items-center gap-4 mb-6 mt-6">
-              <div className="w-1 h-10 bg-red-600 rounded-full"></div>
-              <h2 className="text-4xl font-bold">Teman Saturnus</h2>
-            </div>
             <p className="text-xl leading-relaxed text-gray-300 ml-6 mb-4">
-              Saturnus memiliki satelit alami yang disebut "moon". Moon mengelilingi Saturnus sebagai satu-satunya satelit alaminya dan selalu menjaga jarak yang tetap. Dari posisinya, Moon memengaruhi pasang surut air laut dan membantu menjaga keseimbangan gerakan Saturnus di ruang angkasa.
+              Saturnus adalah planet gas raksasa yang terkenal dengan sistem cincinnya yang indah. Planet ini memiliki banyak bulan dan kepadatan yang rendah dibandingkan planet lain. Saturnus memerlukan waktu sekitar 29 tahun untuk mengelilingi Matahari satu kali.
             </p>
-            <Link to="/planet/Uranus">
-              <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full md:w-1/3">
-                Menuju Uranus <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </Link>
           </div>
 
           <div className='w-full '>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/qTJJUsUk3_8?si=62rXCIiO0gq9SRKI&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/qTJJUsUk3_8?si=62rXCIiO0gq9SRKI&amp;start=5"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg w-full md:min-h-[75vh] rounded-xl"
+            />
           </div>
 
           <div className='flex flex-wrap md:flex-nowrap gap-x-5'>
@@ -79,7 +76,7 @@ const Bulan = () => {
 
         {/* BUTTON */}
         <div className="flex flex-col md:flex-row justify-center gap-10 mt-24">
-          <Link to="/planet/Jupiter">
+          <Link to="/planet/jupiter">
             <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
               <i class="fa-solid fa-arrow-left"></i> Menuju Jupiter
             </button>
@@ -89,7 +86,7 @@ const Bulan = () => {
               Halaman utama
             </button>
           </Link>
-          <Link to="/planet/Uranus">
+          <Link to="/planet/uranus">
             <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
               Menuju Uranus <i class="fa-solid fa-arrow-right"></i>
             </button>
