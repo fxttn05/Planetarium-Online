@@ -13,7 +13,7 @@ const QuizResult = ({ score, total, onRestart }) => {
 
       <p className="text-xl text-gray-300 mb-10">
         {score >= 4
-          ? "Hebat! Kamu pintar tentang planet 🚀"
+          ? "Hebat! Kamu pintar tentang tata surya 🚀"
           : "Ayo Pelajari dan tonton videonya lagi! 🌟"}
       </p>
 

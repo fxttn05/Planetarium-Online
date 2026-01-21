@@ -73,14 +73,14 @@ const MiniCarouselCard = ({ facts }) => {
           onClick={prev}
           className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white transition"
         >
-          ‹
+          <i class="fa-solid fa-angle-left"></i>
         </button>
 
         <button
           onClick={next}
           className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white transition"
         >
-          ›
+          <i class="fa-solid fa-angle-right"></i>
         </button>
       </div>
     </div>

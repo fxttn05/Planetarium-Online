@@ -72,7 +72,7 @@ const Home = () => {
                       Fakta Menarik lain tentang luar angkasa
                     </p>
                     <div className="mt-6 text-white text-center">
-                      <Link to="/funcfact" className="">
+                      <Link to="/funfact" className="">
                         <button className='bg-red-600 py-3 rounded-full w-full font-medium font-space  hover:scale-102'>
                           Fun fact <i class="fa-solid fa-arrow-right"></i>
                         </button>
