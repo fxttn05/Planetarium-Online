@@ -1,78 +1,97 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Footer from '../../components/Footer';
+import { useNavigate } from 'react-router-dom'
+import QuizCard from "../../components/Quiz/QuizCard";
+import plutoQuiz from "../../data/plutoQuiz";
+import MiniCarouselCard from "../../components/MiniCarouselCard";
+import { plutoFacts } from "../../data/facts";
+import { Link } from 'react-router-dom';
 const Pluto = () => {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen flex flex-col bg-[#1a1f3c] text-white">
-      
-      {/* CONTENT */}
-      <main className="flex-grow max-w-5xl mx-auto px-6 py-16">
-        
-        {/* HEADER */}
+    <div className="bg-[url('/outer-space-background.jpg')] bg-cover bg-center bg-[#171B3E] bg-blend-multiply text-white">
+      <div className="flex-grow max-w-5xl mx-auto py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-20">
-          <img
-            src="/Astronaut.png"
-            alt="Astronaut"
-            className="w-48 h-48 object-contain"
-          />
-
-          <h1 className="text-7xl md:text-9xl font-bold">
-           Pluto
-          </h1>
-
+          
+          {/* GAMBAR KIRI */}
           <img
             src="/planet/Pluto.png"
-            alt="Pluto"
-            className="w-56 h-56 md:w-64 md:h-64 rounded-3xl object-cover border-4 border-[#2d345e]"
+            alt="Mars"
+            className="order-2 md:order-1 w-40 h-40 md:w-56 md:h-56 float"
           />
+        
+          {/* JUDUL */}
+          <h1 className="order-1 md:order-2 text-7xl md:text-9xl font-bold font-space">
+            Pluto
+          </h1>
+          
+          {/* GAMBAR KANAN */}
+          <img
+            src="/planet-real/Pluto.png"
+            alt="Mars Real"
+            className="order-3 md:order-3 w-40 h-40 md:w-56 md:h-56 object-contain"
+          />
+        
         </div>
 
-        {/* CONTENT  */}
-        <div className="max-w-3xl space-y-16">
-          
-          <section>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-1 h-10 bg-red-600 rounded-full"></div>
-              <h2 className="text-4xl font-bold">Fakta Cepat</h2>
-            </div>
-            <ul className="list-disc ml-6 space-y-3 text-xl text-gray-300 marker:text-red-500">
-              <li>Pluto adalah planet kerdil di tata surya kita</li>
-              <li>Memiliki lima bulan yang diketahui</li>
-              <li>Permukaannya terdiri dari es dan batuan</li>
-              <li>Orbitnya sangat elips dan miring</li>
-            </ul>
-          </section>
 
-          <section>
+        <div className="space-y-10">
+          <div>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-1 h-10 bg-red-600 rounded-full"></div>
               <h2 className="text-4xl font-bold">Penjelasan</h2>
             </div>
             <p className="text-xl leading-relaxed text-gray-300 ml-6">
-              Pluto adalah planet kerdil yang terletak di tepi tata surya kita.
-              Meskipun ukurannya kecil, Pluto memiliki lima bulan yang diketahui,
-              dengan Charon sebagai yang terbesar. Permukaannya terdiri dari es
-              dan batuan, dan orbitnya sangat elips serta miring dibandingkan
-              dengan planet-planet lain di tata surya.
+              Pluto adalah planet katai yang berada di wilayah Sabuk Kuiper dan berukuran sangat kecil. Planet ini memiliki suhu yang sangat dingin serta orbit yang unik dan memanjang. Pluto membutuhkan waktu sekitar 248 tahun untuk mengelilingi Matahari satu kali.
             </p>
-          </section>
+          </div>
+
+          <div className='w-full '>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/sZ6jknz0aR8?si=QChLFiZ5rZzr3VJk&amp;start=100"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg w-full md:min-h-[75vh] rounded-xl"
+            />
+          </div>
+
+          <div className='flex flex-wrap md:flex-nowrap gap-x-5'>
+            <div className='w-full md:w-2/5'>
+              <div className='rounded-lg bg-[#2F3780]/20 mb-5 p-8'>
+                <MiniCarouselCard facts={plutoFacts} />
+              </div>
+            </div> 
+            <div className='w-full md:w-3/5'>
+              <QuizCard quizData={plutoQuiz}/>
+            </div>
+          </div>
 
         </div>
 
         {/* BUTTON */}
-        <div className="flex justify-center mt-24">
-          <button
-            onClick={() => navigate('/planet')}
-            className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xl hover:bg-white transition active:scale-95"
-          >
-            Kembali
-          </button>
+        <div className="flex flex-col md:flex-row justify-center gap-10 mt-24">
+          <Link to="/planet/neptunus">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
+              <i class="fa-solid fa-arrow-left"></i> Menuju Neptunus
+            </button>
+          </Link>
+          <Link to="/planet">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
+              Halaman utama
+            </button>
+          </Link>
+          <Link to="/planet/bulan">
+            <button className="bg-gray-200 text-black px-14 py-3 rounded-xl font-bold text-xs md:text-lg hover:bg-white transition active:scale-95 w-full">
+              Menuju Bulan <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </Link>
         </div>
+      </div>
 
-      </main>
-
-   
     </div>
   )
 }
