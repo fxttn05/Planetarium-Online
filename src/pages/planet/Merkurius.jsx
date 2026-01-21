@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 const Merkurius = () => {
-  const navigate = useNavigate()
+  
 
   return (
     <div className="bg-[url('/outer-space-background.jpg')] bg-cover bg-center bg-[#171B3E] bg-blend-multiply text-white">

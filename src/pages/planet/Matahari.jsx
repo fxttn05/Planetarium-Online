@@ -7,7 +7,7 @@ import { sunFacts } from "../../data/facts";
 import { Link } from 'react-router-dom';
 
 const Matahari = () => {
-const navigate = useNavigate()
+
   return (
     <div className="bg-[url('/outer-space-background.jpg')] bg-cover bg-center bg-[#171B3E] bg-blend-multiply text-white">
       <div className="flex-grow max-w-5xl mx-auto py-16">

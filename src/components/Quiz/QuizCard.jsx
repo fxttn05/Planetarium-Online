@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import QuizQuestion from "./QuizQuestion";
 import QuizResult from "./QuizResult";
 
@@ -15,14 +15,9 @@ const QuizCard = ({ quizData }) => {
     startQuiz();
   }, [quizData]);
 
-  const startQuiz = () => {
-    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
-    setQuestions(shuffled.slice(0, 5));
-    setCurrent(0);
-    setScore(0);
-    setFinished(false);
-    setSelected(null);
-  };
+  useEffect(() => {
+    startQuiz();
+  }, [startQuiz]);
 
   const handleAnswer = (index) => {
     if (selected !== null) return;
