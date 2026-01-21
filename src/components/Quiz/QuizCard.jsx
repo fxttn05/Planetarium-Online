@@ -11,10 +11,17 @@ const QuizCard = ({ quizData }) => {
   const [selected, setSelected] = useState(null);
   const [fade, setFade] = useState(false);
 
-  useEffect(() => {
-    startQuiz();
+  // ✅ DEFINISIKAN DULU
+  const startQuiz = useCallback(() => {
+    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
+    setQuestions(shuffled.slice(0, 5));
+    setCurrent(0);
+    setScore(0);
+    setFinished(false);
+    setSelected(null);
   }, [quizData]);
 
+  // ✅ BARU DIPAKAI
   useEffect(() => {
     startQuiz();
   }, [startQuiz]);
@@ -28,7 +35,6 @@ const QuizCard = ({ quizData }) => {
       setScore((prev) => prev + 1);
     }
 
-    // tunggu 1 detik → fade out → next
     setTimeout(() => {
       setFade(true);
 

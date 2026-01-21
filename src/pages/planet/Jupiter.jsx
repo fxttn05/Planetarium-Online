@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+
 import QuizCard from "../../components/Quiz/QuizCard";
 import jupiterQuiz from "../../data/jupiterQuiz";
 import MiniCarouselCard from "../../components/MiniCarouselCard";
