@@ -28,9 +28,9 @@ const About = () => {
                 </p>
             </div>
 
-            <div className='bg-[#2F3780]/20 p-6 md:p-12 font-space text-lg leading-8 mt-4 rounded-xl'>
+            {/* <div className='bg-[#2F3780]/20 p-6 md:p-12 font-space text-lg leading-8 mt-4 rounded-xl'>
                 <p>Website ini juga dibuat untuk memenuhi penugasan kelompok 4 dengan tema edukasi. Rancangan website ini disusun sedemikian rupa agar menarik, mudah digunakan, dan bermanfaat bagi kehidupan kita, terutama dalam memperkenalkan ilmu pengetahuan sejak usia dini.</p>
-            </div>
+            </div> */}
 
         </div>
     </>
