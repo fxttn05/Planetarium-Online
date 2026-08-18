@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# Planetary - Online Solar System Learning Website
+### Page preview:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="1921" height="2388" alt="image" src="https://github.com/user-attachments/assets/18b53b56-5a6e-4a40-b2be-191256f6b285" />
+
+<img width="1921" height="2271" alt="image" src="https://github.com/user-attachments/assets/55cbaf40-7e91-4d74-9c34-d277d2790b20" />
+
+<img width="1921" height="2647" alt="image" src="https://github.com/user-attachments/assets/1c874c7e-a050-4a12-99b2-0915ab8b3149" />
+
+<img width="1921" height="2832" alt="image" src="https://github.com/user-attachments/assets/6943f58b-eb9f-4808-a830-ecf11113636d" />
+
+## About
+
+Website ini dibuat sebagai media pembelajaran interaktif untuk membantu anak-anak memahami dunia luar angkasa dengan cara yang seru, mudah, dan menyenangkan.
+
+Di Planet Explorer, kamu bisa:
+- Mengenal 9 planet dan benda lain di Tata Surya
+- Melihat ilustrasi planet yang lucu dan penuh warna
+- Membaca fakta cepat (quick facts) yang mudah dipahami
+- Menjelajahi fun facts unik yang membuat belajar jadi tidak membosankan
+- Memahami konsep dasar tata surya tanpa istilah rumit
+
+Misi kami:
+- Membuat belajar sains, khususnya astronomi, terasa ringan dan penuh
+- Petualangan seperti menjelajah ruang angkasa sungguhan!
+
+Website ini juga dibuat untuk memenuhi penugasan kelompok 4 dengan tema edukasi. Rancangan website ini disusun sedemikian rupa agar menarik, mudah digunakan, dan bermanfaat bagi kehidupan kita, terutama dalam memperkenalkan ilmu pengetahuan sejak usia dini.
 
 ## Available Scripts
 
